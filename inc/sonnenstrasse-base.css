@@ -1,0 +1,524 @@
+
+
+@font-face {
+	font-family: Mason;
+	src: url("../fonts/mason.ttf");
+}
+@font-face {
+	font-family: Andalus;
+	src: url("../fonts/andalus.ttf");
+}
+@font-face {
+    font-family: GentiumBasic;
+    src: url("../fonts/gentium.basic.regular.ttf");
+}
+
+.aventurien-container {
+	background-color: rgb(18, 17, 15); 
+	background: url("../img/background.png") repeat;
+    min-width: 325px;
+	max-width: 656px;
+	padding: 5px;
+}
+
+.aventurien-border {
+	border: solid 7px;
+	border-image: url("../img/border.png") 7 7 7 7;
+}
+
+.aventurien-container-block {
+	display: inline-block;
+	vertical-align: top;
+	width: 325px;
+}
+
+@media only screen and (min-width:731px) {
+	.aventurien-container-block-wide {
+		display: inline-block;
+		vertical-align: top;
+		width: 650px;
+	}
+}
+
+@media only screen and (max-width:730px) {
+	.aventurien-container-block-wide {
+		display: inline-block;
+		vertical-align: top;
+		width: 325px;
+	}
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+/**************************************************************************************/
+/*** aventurien-window                                                              ***/
+/**************************************************************************************/
+
+.aventurien-window {
+	position: relative;
+	margin-top: 10px;
+}
+
+.aventurien-window-top {
+	position: absolute;
+	width: 100%;
+	height: 27px;
+	z-index: 3;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url("../img/window.top.png");
+}
+
+.aventurien-window-bottom {
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	height: 20px;
+	z-index: 3;
+	background-repeat: no-repeat;
+	background-position: center top;
+	background-image: url("../img/window.bottom.png");
+}
+
+@media only screen and (min-width:731px) {
+	.aventurien-container-block-wide .aventurien-window-top { background-image: url("../img/window.wide.top.png"); }
+	.aventurien-container-block-wide .aventurien-window-bottom { background-image: url("../img/window.wide.bottom.png"); }
+}
+
+.aventurien-window-inner {
+	padding: 20px 10px 15px 10px;
+}
+
+.aventurien-window-content {
+	background-image: url("../img/background.png");
+	border: 1px solid black;
+	border-left: 2px solid #111111;
+	border-right: 2px solid #111111;
+	min-height: 32px;
+	-webkit-box-shadow: inset 0px 0px 100px 25px rgba(0,0,0,0.75);
+	-moz-box-shadow: inset 0px 0px 100px 25px rgba(0,0,0,0.75);
+	box-shadow: inset 0px 0px 100px 25px rgba(0,0,0,0.75);
+}
+
+.aventurien-window-title {
+	position: relative;
+	text-align: center;
+	line-height: 32px;
+	height: 32px;
+	background-image: url("../img/background.line.png");
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	padding: 0px 0px 0px 2px;
+	background-clip: border-box;
+}
+
+/**************************************************************************************/
+/*** aventurien-parchment                                                           ***/
+/**************************************************************************************/
+
+.aventurien-container-parchment {
+}
+
+@media only screen and (min-width:731px) {
+	.aventurien-parchment {
+		position: relative;
+		margin-top: 10px;
+		width: 650px;
+		min-height: 300px;
+		padding: 60px 0px 110px 0px;
+		background-image: url("../img/parchment.wide.top.png"), url("../img/parchment.wide.bottom.png"), url("../img/parchment.wide.mid.png");
+		background-repeat: no-repeat, no-repeat, repeat-y;
+		background-position: left top, left bottom, left top;
+		background-clip: border-box, border-box, content-box;
+	}
+	.aventurien-parchment .aventurien-parchment-content {
+		text-align: left;
+	}
+}
+
+@media only screen and (max-width:730px) {
+	.aventurien-parchment {
+		position: relative;
+		margin-top: 10px;
+		width: 325px;
+		min-height: 300px;
+		padding: 60px 0px 110px 0px;
+		background-image: url("../img/parchment.top.png"), url("../img/parchment.bottom.png"), url("../img/parchment.mid.png");
+		background-repeat: no-repeat, no-repeat, repeat-y;
+		background-position: left top, left bottom, left top;
+		background-clip: border-box, border-box, content-box;
+	}
+}
+
+.aventurien-parchment-cornered {
+    background-image: url("../img/parchment.top.cornered.png"), url("../img/parchment.bottom.png"), url("../img/parchment.mid.png");
+}
+
+.aventurien-parchment-crest-dragon {
+	position: absolute;
+	top: -10px;
+	height: 100px;
+	width: 100%;
+	background: url("../img/crests/dragon.png") center top no-repeat;
+	z-index: 5;
+}
+
+.aventurien-parchment-crest-auge {
+	position: absolute;
+	top: -10px;
+	height: 35px;
+	width: 100%;
+	background: url("../img/crests/auge.png") center top no-repeat;
+	z-index: 5;
+}
+
+.aventurien-parchment-content {
+	padding: 0px 35px 0px 35px;
+	text-align: center;
+	font-family: GentiumBasic;
+	font-size: 10pt;
+	line-height: 11pt;
+    color: #000000;
+}
+
+.aventurien-parchment-content h1 {
+	position: relative;
+	padding: 16px 0px 16px 0px;
+    margin-bottom: 0px;
+	background-image: url("../img/heading.top.png"), url("../img/heading.bottom.png"), url("../img/heading.mid.png");
+	background-repeat: no-repeat, no-repeat, repeat-y;
+	background-position: center top, center bottom, center top;
+	background-clip: border-box, border-box, content-box;
+				
+	color: #56442b;
+				
+	font-family: Andalus;
+	font-size: 22px;
+	font-weight: bold;
+	line-height: 25px;
+	text-align: center;
+/*	
+	font-family: Mason;
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 24px;
+*/
+}
+
+.aventurien-parchment-content h2 {
+    line-height: 16pt;
+    font-size: 1.30em;
+    color: #56442b;
+    font-family: GentiumBasic;
+    font-weight: bold;
+	text-align: center;
+}
+
+.aventurien-parchment-content h1:before, .aventurien-parchment-content h1:after {
+	content: "";
+	height: 4px;
+	display: block;
+}
+
+.aventurien-parchment-content hr {
+	position: relative;
+	height: 16px;
+	width: 100%;
+	background: url("../img/heading.line.png") center center no-repeat;
+	border: none;
+}
+
+/**************************************************************************************/
+/*** aventurien-portrait                                                            ***/
+/**************************************************************************************/
+
+.aventurien-container-portrait {
+    position: relative;
+	top: 8px;
+	width: 300px;
+	margin: 0px auto 20px auto;
+}
+
+.aventurien-portrait-huge {
+    width: 300px;
+    height: 430px;
+    background-image: url("../img/cover.default.jpg");
+    background-position-x: center;
+    background-size: cover;
+}
+
+.aventurien-portrait-shadow {
+    width: 300px;
+    height: 430px;
+    /* background-image: url("../img/cover.shadow.png"); */
+    box-shadow: inset 0px 0px 10px 5px rgba(0,0,0,0.25);
+    position: absolute;
+    top: 0px;
+}
+
+.aventurien-portrait-frame {
+    width: 300px;
+    height: 430px;
+    /* background-image: url("../img/cover.frame.png"); */
+    display: none;
+    position: absolute;
+    top: 0px;
+}
+
+/**************************************************************************************/
+/*** aventurien-list                                                                ***/
+/**************************************************************************************/
+
+.aventurien-list {
+    display: inline-block;
+}
+
+.aventurien-list-title {
+	font-family: 'Overlock';
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 32px;
+}
+
+.aventurien-list-items {
+}
+
+.aventurien-list-item {
+    width: 100px;
+    height: 170px;
+    margin: 4px;
+    display: inline-block;
+    float: left;
+}
+
+.aventurien-list-item-frame {
+    width: 90px;
+    height: 120px;
+    position: absolute;
+    border: 5px solid;
+    border-image: url(../img/border.slim.png) 5 5 5 5;
+}
+
+.aventurien-list-item-frame a {
+    width: 90px;
+    height: 120px;
+    display: block;    
+    -moz-box-shadow:    inset 0 0 7px 1px #000000;
+    -webkit-box-shadow: inset 0 0 7px 1px #000000;
+    box-shadow:         inset 0 0 7px 1px #000000;
+}
+
+.aventurien-list-item-frame a:hover {
+    outline: 1px solid #a99877;
+    background: rgba(0, 0, 0, .3);
+}
+
+.aventurien-list-item-thumbnail {
+    width: 90px;
+    height: 120px;
+    margin: 5px;
+    background-position-x: center;
+    background-size: cover;
+}
+
+.aventurien-list-item-label {
+    width: 110px;
+    height: 40px;
+    position: absolute;
+    display: inline-table;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
+
+.aventurien-list-item-label a {
+    color: #a99877;
+}
+
+.aventurien-list-item-label div {
+    display: table-cell;
+    text-align: center;
+    padding: 10px 5px 5px 5px;
+}
+
+.aventurien-list-item-label-normal {
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 12px;
+}
+
+.aventurien-list-item-label-small {
+    font-size: 9px;
+    font-weight: normal;
+    line-height: 12px;
+}
+
+/**************************************************************************************/
+/*** aventurien-date                                                                ***/
+/**************************************************************************************/
+
+.aventurien-date {
+    min-height: 60px;   
+    -webkit-margin-before: 4em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.aventurien-date-bg {
+    position: relative;
+    border: 4px solid black;
+    border-image: url(../img/date.border.png) 4 4 4 4;
+    background-image: url(../img/background.png);
+    box-shadow: inset -20px 0 20px -10px rgb(0, 0, 0), inset 20px 0 20px -10px rgb(0, 0, 0);
+}
+
+.aventurien-date-banner {
+    display: inline-block;
+    position: absolute;
+    top: -7px;
+    left: -7px;
+    width: 75px;
+    height: 70px;
+    background-image: url(../img/date.banner.png);
+}
+
+.aventurien-date-info {
+    display: inline-block;
+    padding-left: 70px;
+    top: 1px;
+    position: relative;
+}
+
+.aventurien-date-banner-month {
+    margin-top: 8px;
+    font: normal 8px/1.0 Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.aventurien-date-banner-day {
+    font: normal 18px/1.0 Arial, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.aventurien-date-unknown {
+    font-size: 34px;
+}
+
+.aventurien-date-banner-year {
+    margin-top: 2px;
+    font: normal 8px/1.0 Arial, sans-serif;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.aventurien-date-info-post a {
+    font: normal 12px/1.5 Arial, sans-serif;
+    color: #fff;
+    text-shadow: 1px 1px black;
+}
+
+.aventurien-date-info-text {
+    font: normal 12px/1.5 Arial, sans-serif;
+    color: #a99877;
+    text-shadow: 1px 1px black;
+}
+
+.aventurien-date-info-location {
+    font: normal 12px/1.5 Arial, sans-serif;
+    color: #a99877;
+    text-shadow: 1px 1px black;
+}
+
+/**************************************************************************************/
+/*** spoiler                                                                        ***/
+/**************************************************************************************/
+
+.sp-wrap {
+	padding: 0px;
+    border-style: solid;
+    border-image: none;
+    border-width: 1px 1px 1px 2px;
+    clear: both;
+	margin-bottom:10px;
+}
+.sp-head {
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	margin-left: 6px;
+	padding: 4px 14px 3px;
+	text-align: left;
+}
+.sp-body {
+	padding: 2px 6px;
+	height:auto;
+}
+.spdiv {
+	width: 98%;
+    margin: 0px auto;
+    text-align: right;
+    font-size: 0.8em;
+	cursor: pointer;
+	display:block;
+}
+
+
+.sp-wrap-default {
+	background: none repeat scroll 0% 0% #E9E9E6;
+    border-color: #C3CBD1;
+}
+.sp-wrap-default .sp-head {
+	background: url(../img/icon_plus.gif) no-repeat left center;
+	color: #2A2A2A;
+}
+.sp-wrap-default .sp-head.unfolded {
+	background: url(../img/icon_minus.gif) no-repeat left center;
+}
+.sp-wrap-default .sp-body {
+	background: #F5F5F5;
+	border-top:1px solid #C3CBD1;
+}
+.sp-wrap-default .spdiv {
+    color: #444;
+}
+
+
+/*	-==========================- OVERWRITE PLUGIN STYLES -==========================-  */
+
+div .sp-wrap {
+	border: 1px solid #333333;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div .sp-wrap-default {
+	background-color: rgba(10, 10, 10, 0.2);
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25) 0, rgba(0, 0, 0, 0) 30%);
+	border-color: #575757;
+	box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.4);
+}
+
+div .sp-wrap-default .sp-body {
+	background: none;
+	border-top: 1px solid #333333;
+}
+
+div .sp-wrap-default .sp-head {
+	color: unset;
+}
+

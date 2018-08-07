@@ -1,0 +1,15 @@
+<?php
+    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+add_action('init', 'sonnenstrasse_base_css_and_js');
+
+function sonnenstrasse_base_css_and_js() {
+    wp_register_style('sonnenstrasse_base_css', plugins_url('sonnenstrasse-base.css', __FILE__));
+    wp_enqueue_style('sonnenstrasse_base_css');
+    wp_enqueue_style('dashicons');
+}
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+?>

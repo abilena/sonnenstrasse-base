@@ -128,7 +128,7 @@
 }
 
 @media only screen and (min-width:731px) {
-	.aventurien-parchment {
+	.aventurien-container-block-wide .aventurien-parchment {
 		position: relative;
 		margin-top: 10px;
 		width: 650px;
@@ -139,8 +139,22 @@
 		background-position: left top, left bottom, left top;
 		background-clip: border-box, border-box, content-box;
 	}
-	.aventurien-parchment .aventurien-parchment-content {
+	.aventurien-container-block-wide .aventurien-parchment .aventurien-parchment-content {
 		text-align: left;
+	}
+	.aventurien-container-block .aventurien-parchment {
+		position: relative;
+		margin-top: 10px;
+		width: 325px;
+		min-height: 300px;
+		padding: 60px 0px 110px 0px;
+		background-image: url("../img/parchment.top.png"), url("../img/parchment.bottom.png"), url("../img/parchment.mid.png");
+		background-repeat: no-repeat, no-repeat, repeat-y;
+		background-position: left top, left bottom, left top;
+		background-clip: border-box, border-box, content-box;
+	}
+	.aventurien-container-block .aventurien-parchment .aventurien-parchment-content {
+		text-align: center;
 	}
 }
 

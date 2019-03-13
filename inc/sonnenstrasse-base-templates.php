@@ -12,7 +12,13 @@ function sonnenstrasse_base_parchment_html($name, $content, $crest, $type) {
 
 	if (!isset($type))
 	{
-		$type = "cornered";
+		$block_class = "aventurien-container-block";
+		$parchment_class = "aventurien-parchment-cornered";
+	}
+	else
+	{
+		$block_class = "aventurien-container-block-$type";
+		$parchment_class = "aventurien-parchment-$type";
 	}
 
     $output = "";
@@ -20,7 +26,8 @@ function sonnenstrasse_base_parchment_html($name, $content, $crest, $type) {
     $template->set("Name", $name);
     $template->set("Content", $content);
 	$template->set("Crest", $crest);
-	$template->set("Type", "aventurien-parchment-" . $type);
+	$template->set("BlockClass", $block_class);
+	$template->set("ParchmentClass", $parchment_class);
     $output .= $template->output();
 
 	return $output;

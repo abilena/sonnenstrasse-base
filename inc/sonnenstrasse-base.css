@@ -440,6 +440,10 @@
     text-shadow: 1px 1px black;
 }
 
+.aventurien-date-info-post {
+	display: flex;
+}
+
 .aventurien-date-info-post a {
     font: normal 12px/1.5 Arial, sans-serif;
     color: #fff;

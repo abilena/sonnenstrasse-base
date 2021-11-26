@@ -1,0 +1,27 @@
+
+:root {
+    --backColor: #000000;
+    --borderColor: #4b402e;
+    --baseColor: #a99877;
+    --headerColor: #f3e6d0;
+    --hoverColor: #ffffff;
+    --selectedColor: #f1bf44;
+    --disabledColor: #cccccc;
+}
+
+.disable-select {
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+}
+
+@keyframes blinking {
+    0% { color: #a99877; text-shadow: none; }
+    20% { color: #ffffff; text-shadow: 0px 0px 1px #fff;  }
+    100% { color: #a99877; text-shadow: none; }
+}
+
+.blink {
+    animation: blinking 1s 1;
+}
